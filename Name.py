@@ -1,15 +1,14 @@
-from Teacher import Teacher
-from Student import Student
+correct_username = "user123"
+correct_password = "password123"
 
-teacher1=Teacher('王老師')
-teacher2=Teacher('朱老師')
+# 輸入用戶名
+username = input("請輸入你的帳號: ")
 
-teacher1.getName()
-teacher2.getName()
+# 輸入密碼（這裡用 input 會顯示在畫面上，通常可以使用 getpass 模組來隱藏密碼輸入）
+password = input("請輸入你的密碼: ")
 
-
-student1 = Student("小明", "18", "100")
-student2 = Student("小華", "19", "10")
-
-student1.getName()
-student2.getName()
+# 驗證用戶名和密碼
+if username == correct_username and password == correct_password:
+    print("登入成功！")
+else:
+    print("帳號或密碼錯誤，請再試一次。")
