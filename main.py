@@ -1,15 +1,18 @@
 from Teacher import Teacher
-from Student import Student
 
-teacher1=Teacher('王老師')
-teacher2=Teacher('朱老師')
+teacher_name_list=['王老師','朱老師','陳老師']
+teacher_list = []
 
-teacher1.getName()
-teacher2.getName()
+for i in range(len(teacher_name_list)):
+    teacher = Teacher(teacher_name_list[i])
+    teacher_list.append(teacher)
 
+print(teacher_list)
 
-student1 = Student("小明", "18", "100")
-student2 = Student("小華", "19", "10")
+print('----------------------')
+for i in range(len(teacher_name_list)):
+    print(str(i),':',teacher_name_list[i])
+    
+print('----------------------')
 
-student1.getName()
-student2.getName()
+print('[Message] End')
